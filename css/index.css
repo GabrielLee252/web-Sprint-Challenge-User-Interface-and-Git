@@ -108,6 +108,10 @@ header nav a{
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .middle-content h2 {
@@ -127,55 +131,62 @@ header nav a{
     margin: 20px 2.5%;
     color: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .box1{
     background: teal;
+    
 }
 
 .box2{
     background: gold;
+    
 }
 
 .box3{
     background: cadetblue;
+    
 }
 
 .box4{
     background: coral;
+    
 }
 
 .box5{
     background: crimson;
+    
 }
 
 .box6{
     background: forestgreen;
+    
 }
 
 .box7{
     background: darkorchid;
+    
 }
 
 .box8{
     background: hotpink;
+    
 }
 
 .box9{
-    background-color: indigo;
+    background: indigo;
+    
 }
 
 .box10{
-    background-color: dodgerblue;
+    background: dodgerblue;
+    
 }
-
 .boxes div{
     margin: 1rem;
     width: 6rem;
     height: 6rem;
-    display: table-row;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -206,21 +217,45 @@ footer nav {
     align-items: center;
     padding: 20px 2%;
     font-size: 14px;
-    background-color: black;
 }
 
 footer nav a {
     color: white;
     text-decoration: none;
 }
+@media(max-width: 500px){
+    header{
+        flex-direction: column;
+        align-items: center;
 
-header nav {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 2%;
-    font-size: 14px;
-  }
+    }
+    header nav{
+        flex-direction: column;
+        display: flex;
+        margin: .5rem;
+    }
+    header nav a {
+        margin: 0px;
+        border: 1px solid black;
+        padding: .5rem 5rem;
+        border-radius: .5rem;
+    }
+    .top-content .text-container{
+        width: 100%;
+    }
+    .middle-content .boxes{
+        flex-direction: column;
+        align-items: center;
 
-
+    }
+    .middle-content .boxes div:nth-child(n+5){
+        display: none;
+    }
+    footer{
+        display:none;
+    }
+    .bottom-content{
+        display: none;
+    }
+    
+}
